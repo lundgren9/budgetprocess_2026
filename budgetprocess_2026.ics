@@ -1,0 +1,198 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Simrishamn Kommun//Budgetprocess//EN
+CALSCALE:GREGORIAN
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260312
+SUMMARY:Uppstartsmöte – Genomgång av tidplan och styrmodell
+DESCRIPTION:Genomgång av tidplan, planeringsförutsättningar, anvisningar och styrmodell.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Uppstartsmöte om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260320
+SUMMARY:Deadline – Investerings- och exploateringsbudget
+DESCRIPTION:Nämnderna ska inkomma med antagna budgetskrivelser för investerings- och exploateringsbudget.
+CATEGORIES:Deadline
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Deadline för investerings- och exploateringsbudget om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260410
+SUMMARY:Budgetberedning dag 1
+DESCRIPTION:Presentation av antagna budgetskrivelser + lokalförsörjningsplan.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 1 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260417
+SUMMARY:Budgetberedning dag 2
+DESCRIPTION:Eventuella kompletterande presentationer.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 2 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260424
+SUMMARY:Budgetberedning dag 3
+DESCRIPTION:Sammanfattande diskussioner.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 3 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260615
+SUMMARY:KF-beslut – Investerings- och exploateringsbudget
+DESCRIPTION:Kommunfullmäktige beslutar om investerings- och exploateringsbudgetar för 2027 samt plan 2028–2031.
+CATEGORIES:KF-beslut
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: KF-beslut om investeringsbudget om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260630
+SUMMARY:Deadline – Driftbudget och internkontrollplan
+DESCRIPTION:Nämnderna ska inkomma med budgetskrivelser för drift samt internkontrollplan.
+CATEGORIES:Deadline
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Deadline för driftbudget och internkontrollplan om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260813
+SUMMARY:Budgetberedning dag 1
+DESCRIPTION:Omvärldsanalys + presentation av driftbudgetskrivelser.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 1 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260814
+SUMMARY:Budgetberedning dag 2
+DESCRIPTION:Presentation och nämnddialog.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 2 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260824
+SUMMARY:Budgetberedning dag 3
+DESCRIPTION:Eventuella kompletterande presentationer.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 3 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260828
+SUMMARY:Budgetberedning dag 4
+DESCRIPTION:Sammanfattande diskussioner.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Budgetberedning dag 4 om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260925
+SUMMARY:Deadline – Taxeförslag
+DESCRIPTION:Nämnderna ska inkomma med beslutade taxeförslag för 2027.
+CATEGORIES:Deadline
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Deadline för taxeförslag om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20260928
+SUMMARY:MBL-förhandling
+DESCRIPTION:Förhandling enligt MBL.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: MBL-förhandling om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261005
+SUMMARY:Reservdag MBL-förhandling
+DESCRIPTION:Reservdag för MBL-förhandling.
+CATEGORIES:Budgetberedning
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Reservdag för MBL-förhandling om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20261026
+SUMMARY:KF-beslut – Skattesats, driftramar, taxor
+DESCRIPTION:Kommunfullmäktige beslutar om skattesats, driftramar, investeringsbudget, taxor och god ekonomisk hushållning.
+CATEGORIES:KF-beslut
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: KF-beslut om skattesats och driftramar om en vecka.
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20270115
+SUMMARY:Deadline – Internbudget fastställs
+DESCRIPTION:Nämnderna ska ha fastställt internbudgeten inklusive mål.
+CATEGORIES:Deadline
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:Påminnelse: Deadline för internbudget om en vecka.
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR
