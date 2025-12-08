@@ -3,53 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budgetprocess Simrishamn 2026</title>
+    <title>Budgetprocess Simrishamn 2026–2027</title>
     <style>
+        /* === GRUNDLÄGGANDE STYLING === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
-        h1 {
-            color: #004d40;
+
+        /* === CONTAINER === */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
-        .file-links {
-            margin-top: 20px;
+
+        /* === HEADER === */
+        header {
+            background: linear-gradient(135deg, #004d40 0%, #00695c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
         }
-        .file-links a {
-            display: block;
-            margin: 10px 0;
-            font-size: 18px;
-            color: #00695c;
-            text-decoration: none;
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
-        .file-links a:hover {
-            text-decoration: underline;
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-top: 10px;
         }
-        .description {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: #e0f2f1;
+
+        /* === HUVUDINNEHÅLL === */
+        .content {
+            padding: 40px 30px;
+        }
+
+        .intro {
+            background: #e8f5e9;
+            padding: 20px;
             border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #00695c;
+        }
+
+        .intro p {
+            font-size: 1.05em;
+            color: #2e7d32;
+        }
+
+        /* === KALENDERSEKTION === */
+        .calendar-section {
+            margin-bottom: 40px;
+        }
+
+        .calendar-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .calendar-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #00695c;
+        }
+
+        .calendar-card h3 {
+            color: #004d40;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+        }
+
+        .calendar-card h3::before {
+            content: "📅";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .calendar-card p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        /* === KNAPPAR === */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-download {
+            background: #00695c;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background: #004d40;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-subscribe {
+            background: #0288d1;
+            color: white;
+        }
+
+        .btn-subscribe:hover {
+            background: #0277bd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn::before {
+            margin-right: 8px;
+            font-size: 1.1em;
+        }
+
+        .btn-download::before {
+            content: "⬇️";
+        }
+
+        .btn-subscribe::before {
+            content: "🔗";
+        }
+
+        /* === URL-BOX === */
+        .url-box {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 4px solid #ff9800;
+        }
+
+        .url-box p {
+            font-size: 0.9em;
+            color: #e65100;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .url-display {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            word-break: break-all;
+            color: #333;
+            border: 1px solid #ffb74d;
+        }
+
+        /* === INSTRUKTIONSSEKTION === */
+        .instructions {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #1976d2;
+        }
+
+        .instructions h2 {
+            color: #0d47a1;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #1565c0;
+        }
+
+        .instructions li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        .instructions strong {
+            color: #0d47a1;
+        }
+
+        /* === INFORMATIONSSEKTION === */
+        .info-section {
+            background: #fff9c4;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #f9a825;
+        }
+
+        .info-section h2 {
+            color: #f57f17;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .info-section h3 {
+            color: #f57f17;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .info-section p {
+            color: #6d4c00;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        /* === FOOTER === */
+        footer {
+            background: #f5f5f5;
+            padding: 20px 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        /* === RESPONSIV DESIGN === */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 20px 15px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Budgetprocess Simrishamn 2026</h1>
-    <p>Här hittar du kalenderfiler (.ics) för hela budgetprocessen i Simrishamns kommun. Du kan ladda ner filerna eller använda länkarna för att prenumerera direkt i din kalender.</p>
+    <!-- CONTAINER FÖR HELA SIDAN -->
+    <div class="container">
+        
+        <!-- HEADER MED TITEL -->
+        <header>
+            <h1>🏛️ Budgetprocess Simrishamn</h1>
+            <p>Kalender för budgetprocessen 2026–2027</p>
+        </header>
 
-    <div class="file-links">
-        budgetprocess_2026.ics📅 Ladda ner budgetprocess_2026.ics</a>
-        budgetprocess_2026.ics🌐 Prenumerera via URL: budgetprocess_2026.ics</a>
-        budgetprocess_2026_NY.ics📅 Ladda ner budgetprocess_2026_NY.ics</a>
-        budgetprocess_2026_NY.ics🌐 Prenumerera via URL: budgetprocess_2026_NY.ics</a>
+        <!-- HUVUDINNEHÅLL -->
+        <div class="content">
+            
+            <!-- INTRODUKTION -->
+            <div class="intro">
+                <p>
+                    <strong>Välkommen!</strong> Här hittar du kalenderfiler (.ics) för hela budgetprocessen 
+                    i Simrishamns kommun. Du kan antingen ladda ner filerna för engångsimport, 
+                    eller prenumerera via URL för att få automatiska uppdateringar när kalendern ändras.
+                </p>
+            </div>
+
+            <!-- INSTRUKTIONER FÖR OUTLOOK -->
+            <div class="instructions">
+                <h2>📖 Så här använder du kalendern i Outlook</h2>
+                <ol>
+                    <li>
+                        <strong>Ladda ner och importera (engångsimport):</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px;">
+                            <li>Klicka på "Ladda ner kalenderfil"</li>
+                            <li>Öppna filen i Outlook (dubbelklicka på den)</li>
+                            <li>Posterna läggs till i din kalender</li>
+                            <li><em>OBS: Uppdateras INTE automatiskt</em></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Prenumerera via URL (rekommenderas):</strong>
+                        <ul style="margin-top: 8px; margin-left: 20px;">
+                            <li>Kopiera URL:en från "Prenumerera via URL"</li>
+                            <li>I Outlook: <em>Arkiv → Kontoinställningar → Internetkalendrar → Ny...</em></li>
+                            <li>Klistra in URL:en och klicka OK</li>
+                            <li><em>✅ Uppdateras automatiskt när vi ändrar kalendern!</em></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- KALENDERSEKTION -->
+            <section class="calendar-section">
+                
+                <!-- KALENDERFIL 1 -->
+                <div class="calendar-card">
+                    <h3>Budgetprocess 2026 (ursprunglig version)</h3>
+                    <p>
+                        Denna kalender innehåller alla viktiga datum för budgetprocessen 2026: 
+                        uppstart, budgetberedning, deadlines för investerings- och driftbudget, 
+                        MBL-förhandlingar och kommunfullmäktiges beslut.
+                    </p>
+                    
+                    <div class="button-group">
+                        <a href="budgetprocess_2026.ics" class="btn btn-download" download>
+                            Ladda ner kalenderfil
+                        </a>
+                        <button class="btn btn-subscribe" onclick="copyToClipboard('url1')">
+                            Kopiera prenumerations-URL
+                        </button>
+                    </div>
+                    
+                    <div class="url-box" id="url1-box" style="display: none;">
+                        <p>✅ URL kopierad! Använd denna i Outlook:</p>
+                        <div class="url-display" id="url1">
+                            https://raw.githubusercontent.com/lundgren9/budgetprocess_2026/main/budgetprocess_2026.ics
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KALENDERFIL 2 -->
+                <div class="calendar-card">
+                    <h3>Budgetprocess 2026 NY (uppdaterad version) ⭐</h3>
+                    <p>
+                        <strong>Rekommenderad version!</strong> Uppdaterad kalender som även innehåller 
+                        informationsposter om kommunens övergripande mål, prioriterade fokusområden 
+                        för 2027 samt deadline för nämndernas internbudget (31 januari 2027).
+                    </p>
+                    
+                    <div class="button-group">
+                        <a href="budgetprocess_2026_NY.ics" class="btn btn-download" download>
+                            Ladda ner kalenderfil
+                        </a>
+                        <button class="btn btn-subscribe" onclick="copyToClipboard('url2')">
+                            Kopiera prenumerations-URL
+                        </button>
+                    </div>
+                    
+                    <div class="url-box" id="url2-box" style="display: none;">
+                        <p>✅ URL kopierad! Använd denna i Outlook:</p>
+                        <div class="url-display" id="url2">
+                            https://raw.githubusercontent.com/lundgren9/budgetprocess_2026/main/budgetprocess_2026_NY.ics
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMATION OM INNEHÅLL -->
+            <div class="info-section">
+                <h2>ℹ️ Vad innehåller filerna?</h2>
+                
+                <h3>📋 Budgetprocess 2026 (ursprunglig)</h3>
+                <p>
+                    Innehåller alla formella datum i budgetprocessen från mars 2026 till januari 2027, 
+                    inklusive budgetberedningens möten, nämndernas deadlines, och kommunfullmäktiges beslut.
+                </p>
+
+                <h3>⭐ Budgetprocess 2026 NY (uppdaterad - rekommenderas)</h3>
+                <p>
+                    <strong>Denna version rekommenderas!</strong> Innehåller samma information som 
+                    originalversionen PLUS:
+                </p>
+                <ul style="margin-left: 20px; color: #6d4c00;">
+                    <li>Beslut om prioriterade fokusområden (december 2025)</li>
+                    <li>Information om kommunens hållbarhetspolicy och fokusområden</li>
+                    <li>Deadline för nämndernas fastställande av internbudget (31 januari 2027)</li>
+                    <li>Utökade beskrivningar för bättre förståelse av varje aktivitet</li>
+                </ul>
+
+                <h3>🎯 Viktiga fokusområden för 2027</h3>
+                <p>Kommunfullmäktige har beslutat om följande prioriterade fokusområden:</p>
+                <ul style="margin-left: 20px; color: #6d4c00;">
+                    <li><strong>Fokusområde 1:</strong> Hållbarhet i näringsliv och arbetsmarknad</li>
+                    <li><strong>Fokusområde 9:</strong> Klimatanpassning</li>
+                    <li><strong>Fokusområde 11:</strong> Trygghet och samhällsgemenskap</li>
+                    <li><strong>Fokusområde 13:</strong> Hållbar kultur, fritid, friluftsliv och turism</li>
+                    <li><strong>Fokusområde 17:</strong> Partnerskap och samverkan</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>📧 Frågor? Kontakta ekonomienheten, Simrishamns kommun</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">
+                Senast uppdaterad: December 2025
+            </p>
+        </footer>
     </div>
 
-    <div class="description">
-        <h2>Vad innehåller filerna?</h2>
-        <p><strong>budgetprocess_2026.ics:</strong> Ursprunglig kalender med alla viktiga datum för budgetprocessen 2026: uppstart, budgetberedning, deadlines för investerings- och driftbudget, MBL-förhandlingar och KF-beslut.</p>
-        <p><strong>budgetprocess_2026_NY.ics:</strong> Uppdaterad version som även innehåller informationsposter om kommunens övergripande mål, prioriterade fokusområden för 2027 samt deadline för nämndernas internbudget (31 januari 2027).</p>
-    </div>
+    <!-- JAVASCRIPT FÖR KOPIERA-FUNKTIONALITET -->
+    <script>
+        /**
+         * Funktion för att kopiera URL till urklipp och visa den på sidan
+         * @param {string} urlId - ID för elementet som innehåller URL:en
+         */
+        function copyToClipboard(urlId) {
+            // Hämta URL-texten från elementet med angivet ID
+            const urlElement = document.getElementById(urlId);
+            const url = urlElement.textContent;
+            
+            // Kopiera URL:en till urklipp med hjälp av Clipboard API
+            navigator.clipboard.writeText(url).then(function() {
+                // Om kopieringen lyckades, visa URL-boxen
+                const urlBox = document.getElementById(urlId + '-box');
+                urlBox.style.display = 'block';
+                
+                // Skrolla mjukt ner till URL-boxen så användaren ser den
+                urlBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Dölj URL-boxen automatiskt efter 10 sekunder
+                setTimeout(function() {
+                    urlBox.style.display = 'none';
+                }, 10000);
+                
+            }).catch(function(err) {
+                // Om kopieringen misslyckades, visa ett felmeddelande
+                alert('Kunde inte kopiera URL:en. Försök igen eller kopiera manuellt.');
+                console.error('Fel vid kopiering:', err);
+            });
+        }
+    </script>
 </body>
 </html>
