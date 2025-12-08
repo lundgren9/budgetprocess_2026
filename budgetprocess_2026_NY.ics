@@ -1,211 +1,438 @@
 BEGIN:VCALENDAR
 VERSION:2.0
+PRODID:-//Simrishamns kommun//Budgetprocess 2026-2027//SV
 CALSCALE:GREGORIAN
-PRODID:-//Simrishamn Budgetprocess//EN
-NAME:Budgetprocess Simrishamn 2026–2027
+METHOD:PUBLISH
+X-WR-CALNAME:Budgetprocess Simrishamn 2026-2027
+X-WR-TIMEZONE:Europe/Stockholm
+X-WR-CALDESC:Tidplan för budgetprocessen i Simrishamns kommun 2026-2027
+
+BEGIN:VTIMEZONE
+TZID:Europe/Stockholm
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
 
 BEGIN:VEVENT
+UID:budgetprocess-2025-12-15-fokusomsraden@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20251215
 SUMMARY:KF beslutar om prioriterade fokusområden för 2027
-DESCRIPTION:Kommunfullmäktige beslutar om vilka fokusområden som blir mål för 2027:\n1. Hållbarhet i näringsliv och arbetsmarknad\n9. Klimatanpassning\n11. Trygghet och samhällsgemenskap\n13. Hållbar kultur, fritid, friluftsliv och turism\n17. Partnerskap och samverkan.
+DESCRIPTION:Kommunfullmäktige beslutar om vilka fokusområden som blir mål för 2027:\n\n• Fokusområde 1: Hållbarhet i näringsliv och arbetsmarknad\n• Fokusområde 9: Klimatanpassning\n• Fokusområde 11: Trygghet och samhällsgemenskap\n• Fokusområde 13: Hållbar kultur\, fritid\, friluftsliv och turism\n• Fokusområde 17: Partnerskap och samverkan
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260312
+UID:budgetprocess-2026-03-12-uppstart@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260312T080000
+DTEND;TZID=Europe/Stockholm:20260312T120000
 SUMMARY:Uppstart med budgeten 2027
-DESCRIPTION:Halvdag. Genomgång av tidplan, planeringsförutsättningar, anvisningar och styrmodell.\nInbjudna: budgetberedningen, nämndernas presidium, förvaltningschefer och ekonomer.
+DESCRIPTION:Halvdag. Genomgång av tidplan\, planeringsförutsättningar\, anvisningar och styrmodell.\n\nInbjudna:\n• Budgetberedningen\n• Nämndernas presidium\n• Förvaltningschefer\n• Ekonomer
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-03-20-deadline-investering@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260320
 SUMMARY:Nämnderna lämnar in budgetskrivelse för investeringar
-DESCRIPTION:Nämnderna ska inkomma till ekonomienheten med antagen budgetskrivelse för investeringsbudget och för samhällsplaneringsnämnden även exploateringsbudget för åren 2027–2031.
+DESCRIPTION:Deadline: Nämnderna ska inkomma till ekonomienheten med antagen budgetskrivelse för investeringsbudget och för samhällsplaneringsnämnden även exploateringsbudget för åren 2027–2031.
+LOCATION:Ekonomienheten
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-04-01-utskick@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260401
 SUMMARY:Budgetberedningen erhåller investeringsskrivelser
 DESCRIPTION:Budgetberedningen får budgetskrivelser avseende investeringsbudget och exploateringsbudget inför mötet den 10 april.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260410
+UID:budgetprocess-2026-04-10-beredning-dag1@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260410T080000
+DTEND;TZID=Europe/Stockholm:20260410T170000
 SUMMARY:Budgetberedning dag 1 – Investeringar
-DESCRIPTION:Heldag. Nämndernas presidium presenterar antagna budgetskrivelser för investeringsbudget och exploateringsbudget. Lokalförsörjningsplanen presenteras.\nInbjudna: budgetberedningen, nämndernas presidium, förvaltningschefer.
+DESCRIPTION:Heldag. Nämndernas presidium presenterar antagna budgetskrivelser för investeringsbudget och exploateringsbudget. Lokalförsörjningsplanen presenteras.\n\nInbjudna:\n• Budgetberedningen\n• Nämndernas presidium\n• Förvaltningschefer
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260417
+UID:budgetprocess-2026-04-17-beredning-dag2@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260417T080000
+DTEND;TZID=Europe/Stockholm:20260417T170000
 SUMMARY:Budgetberedning dag 2 – Investeringar
 DESCRIPTION:Heldag. Kompletterande information från nämndernas presidium och förvaltningschefer om budgetberedningen önskar.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260424
+UID:budgetprocess-2026-04-24-beredning-dag3@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260424T080000
+DTEND;TZID=Europe/Stockholm:20260424T170000
 SUMMARY:Budgetberedning dag 3 – Investeringar
 DESCRIPTION:Heldag. Sammanfattande diskussioner kring investeringsbudget och exploateringsbudget.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-05-08-deadline-forslag@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260508
 SUMMARY:Sista dag för politiska förslag – Investeringsbudget
-DESCRIPTION:Politiska förslag till investeringsbudget och exploateringsbudget ska skickas in till Elise för utskick till strategiska utskottet (möte 20 maj).
+DESCRIPTION:Deadline: Politiska förslag till investeringsbudget och exploateringsbudget ska skickas in till Elise för utskick till strategiska utskottet (möte 20 maj).
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260520
+UID:budgetprocess-2026-05-20-strat-utskott@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260520T130000
+DTEND;TZID=Europe/Stockholm:20260520T160000
 SUMMARY:Strategiska utskottet bereder investeringsbudget
 DESCRIPTION:Bereder ärendet inför kommunstyrelsen om investeringsbudget och exploateringsbudget för år 2027 med plan för åren 2028–2031.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-05-22-deadline-ks@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260522
 SUMMARY:Sista dag för politiska förslag inför KS
-DESCRIPTION:Politiska förslag till investeringsbudget och exploateringsbudget ska skickas in till Elise för utskick till kommunstyrelsens sammanträde den 3 juni.
+DESCRIPTION:Deadline: Politiska förslag till investeringsbudget och exploateringsbudget ska skickas in till Elise för utskick till kommunstyrelsens sammanträde den 3 juni.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260603
+UID:budgetprocess-2026-06-03-ks-investering@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260603T130000
+DTEND;TZID=Europe/Stockholm:20260603T170000
 SUMMARY:Kommunstyrelsen bereder investeringsbudget
 DESCRIPTION:Bereder ärendet inför kommunfullmäktige om investeringsbudget och exploateringsbudget för år 2027 med plan för åren 2028–2031.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260615
+UID:budgetprocess-2026-06-15-kf-investering@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260615T180000
+DTEND;TZID=Europe/Stockholm:20260615T210000
 SUMMARY:KF beslutar om investeringsbudget
 DESCRIPTION:Kommunfullmäktige beslutar om investeringsbudget och exploateringsbudget för år 2027 med plan för åren 2028–2031.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-06-30-deadline-drift@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260630
 SUMMARY:Nämnderna lämnar in driftbudgetskrivelse
-DESCRIPTION:Nämnderna ska senast lämna in antagen budgetskrivelse avseende drift till ekonomienheten samt en antagen internkontrollplan för 2027.
+DESCRIPTION:Deadline: Nämnderna ska senast lämna in antagen budgetskrivelse avseende drift till ekonomienheten samt en antagen internkontrollplan för 2027.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-08-06-utskick-drift@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260806
 SUMMARY:Budgetberedningen erhåller driftbudgetskrivelser
 DESCRIPTION:Budgetskrivelser avseende driften och internkontrollplaner skickas ut till budgetberedningen och fackliga representanter. Revisionens budgetskrivelse skickas till KF:s presidium.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260813
+UID:budgetprocess-2026-08-13-beredning-drift-dag1@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260813T080000
+DTEND;TZID=Europe/Stockholm:20260813T170000
 SUMMARY:Budgetberedning dag 1 – Drift
-DESCRIPTION:Heldag. Omvärldsanalys, planeringsförutsättningar och förvaltningschefernas budgetförslag. Presentation och nämnddialog utifrån antagen budgetskrivelse för driften samt internkontrollplan.\nInbjudna: budgetberedningen, nämndernas presidium, förvaltningschefer, ekonomer.
+DESCRIPTION:Heldag. Omvärldsanalys\, planeringsförutsättningar och förvaltningschefernas budgetförslag. Presentation och nämnddialog utifrån antagen budgetskrivelse för driften samt internkontrollplan.\n\nInbjudna:\n• Budgetberedningen\n• Nämndernas presidium\n• Förvaltningschefer\n• Ekonomer
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260814
+UID:budgetprocess-2026-08-14-beredning-drift-dag2@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260814T080000
+DTEND;TZID=Europe/Stockholm:20260814T120000
 SUMMARY:Budgetberedning dag 2 – Drift
-DESCRIPTION:Halvdag. Presentation och nämnddialog utifrån antagen budgetskrivelse för driften samt internkontrollplan.\nInbjudna: budgetberedningen, nämndernas presidium, förvaltningschefer.
+DESCRIPTION:Halvdag. Presentation och nämnddialog utifrån antagen budgetskrivelse för driften samt internkontrollplan.\n\nInbjudna:\n• Budgetberedningen\n• Nämndernas presidium\n• Förvaltningschefer
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-08-20-skr-prognos@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260820
 SUMMARY:SKR presenterar ny skatteunderlagsprognos
 DESCRIPTION:Sveriges Kommuner och Regioner (SKR) presenterar ny skatteunderlagsprognos som är underlag för budgetbeslutet.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-08-21-internhyror@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260821
 SUMMARY:Fastighetsenheten lämnar internhyror
 DESCRIPTION:Fastighetsenheten lämnar information till ekonomienheten om internhyror för 2027.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260824
+UID:budgetprocess-2026-08-24-beredning-drift-dag3@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260824T080000
+DTEND;TZID=Europe/Stockholm:20260824T170000
 SUMMARY:Budgetberedning dag 3 – Drift
 DESCRIPTION:Heldag. Kompletterande information från nämndernas presidium och förvaltningschefer om budgetberedningen önskar.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260828
+UID:budgetprocess-2026-08-28-beredning-drift-dag4@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260828T080000
+DTEND;TZID=Europe/Stockholm:20260828T170000
 SUMMARY:Budgetberedning dag 4 – Drift
 DESCRIPTION:Heldag. Sammanfattande diskussioner kring driftbudget.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-09-10-bolag-budget@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260910
 SUMMARY:Bolag och förbund lämnar budgetförslag
-DESCRIPTION:Bolagen och förbunden lämnar in förslag på budget samt eventuella taxor för 2027.
+DESCRIPTION:Deadline: Bolagen och förbunden lämnar in förslag på budget samt eventuella taxor för 2027.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-09-11-revision-budget@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260911
 SUMMARY:KF:s presidium lämnar förslag på revisionsbudget
-DESCRIPTION:KF:s presidium inkommer till ekonomienheten med förslag på revisionens budgetram för 2027 och plan för åren 2028–2031.
+DESCRIPTION:Deadline: KF:s presidium inkommer till ekonomienheten med förslag på revisionens budgetram för 2027 och plan för åren 2028–2031.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-09-17-utskick-stratutskott@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260917
 SUMMARY:Budgetärendet skickas till strategiska utskottet
-DESCRIPTION:Budgetärendet, taxor samt en sammanställd internkontrollplan skickas ut inför mötet den 23 september.
+DESCRIPTION:Budgetärendet\, taxor samt en sammanställd internkontrollplan skickas ut inför mötet den 23 september.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-09-21-utskick-mbl@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260921
 SUMMARY:Budgetförslag skickas till fackliga inför MBL
 DESCRIPTION:Ekonomienheten skickar ut budgetförslaget till fackliga företrädare och förvaltningschefer inför MBL-förhandlingen den 28 september.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260923
+UID:budgetprocess-2026-09-23-stratutskott-budget@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260923T130000
+DTEND;TZID=Europe/Stockholm:20260923T160000
 SUMMARY:Strategiska utskottet bereder budgetärendet
-DESCRIPTION:Bereder budgetärendet, bolagens taxor samt en sammanställd internkontrollplan inför kommunstyrelsen.
+DESCRIPTION:Bereder budgetärendet\, bolagens taxor samt en sammanställd internkontrollplan inför kommunstyrelsen.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-09-25-deadline-taxor@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20260925
 SUMMARY:Nämnderna lämnar in förslag på taxor
-DESCRIPTION:Nämnderna lämnar in förslag på samtliga taxor för 2027 inför ny mandatperiod.
+DESCRIPTION:Deadline: Nämnderna lämnar in förslag på samtliga taxor för 2027 inför ny mandatperiod.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20260928
+UID:budgetprocess-2026-09-28-mbl@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260928T090000
+DTEND;TZID=Europe/Stockholm:20260928T120000
 SUMMARY:MBL-förhandling
 DESCRIPTION:Förhandling med fackliga företrädare om budgetförslaget.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-10-02-deadline-ks-drift@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20261002
 SUMMARY:Sista dag för politiska förslag inför KS
-DESCRIPTION:Politiska förslag till driftbudget ska skickas in till Elise för utskick till kommunstyrelsen den 14 oktober.
+DESCRIPTION:Deadline: Politiska förslag till driftbudget ska skickas in till Elise för utskick till kommunstyrelsen den 14 oktober.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261005
+UID:budgetprocess-2026-10-05-reservdag-mbl@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20261005T090000
+DTEND;TZID=Europe/Stockholm:20261005T120000
 SUMMARY:Reservdag för MBL-förhandling
 DESCRIPTION:Reservdag för MBL-förhandling.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261007
+UID:budgetprocess-2026-10-07-stratutskott-taxor@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20261007T130000
+DTEND;TZID=Europe/Stockholm:20261007T160000
 SUMMARY:Strategiska utskottet bereder taxor
 DESCRIPTION:Bereder kommunens taxor inför kommunstyrelsen.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2026-10-12-deadline-kf-drift@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20261012
 SUMMARY:Sista dag för politiska förslag inför KF
-DESCRIPTION:Politiska förslag till driftbudget ska skickas in till Elise för utskick till kommunfullmäktige den 26 oktober.
+DESCRIPTION:Deadline: Politiska förslag till driftbudget ska skickas in till Elise för utskick till kommunfullmäktige den 26 oktober.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261014
+UID:budgetprocess-2026-10-14-ks-drift@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20261014T130000
+DTEND;TZID=Europe/Stockholm:20261014T170000
 SUMMARY:Kommunstyrelsen bereder driftbudget
 DESCRIPTION:Bereder budgetärendet och taxor inför kommunfullmäktige och beslutar om en sammanställd internkontrollplan för samtliga nämnder.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:20261026
+UID:budgetprocess-2026-10-26-kf-budget@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20261026T180000
+DTEND;TZID=Europe/Stockholm:20261026T210000
 SUMMARY:KF beslutar om skattesats och driftbudget
-DESCRIPTION:Kommunfullmäktige beslutar om skattesats, driftramar, investerings- och exploateringsbudget, god ekonomisk hushållning och taxor. Internkontrollplaner går upp som informationsärende.
+DESCRIPTION:Kommunfullmäktige beslutar om skattesats\, driftramar\, investerings- och exploateringsbudget\, god ekonomisk hushållning och taxor. Internkontrollplaner går upp som informationsärende.
+LOCATION:Kommunhuset
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:OPAQUE
 END:VEVENT
 
 BEGIN:VEVENT
+UID:budgetprocess-2027-01-31-internbudget@simrishamn.se
+DTSTAMP:20251208T120000Z
 DTSTART;VALUE=DATE:20270131
 SUMMARY:Nämnderna fastställer internbudget inkl. mål
-DESCRIPTION:Nämnderna ska ha fastställt internbudgeten, inklusive mål, senast detta datum.
+DESCRIPTION:Deadline: Nämnderna ska ha fastställt internbudgeten\, inklusive mål\, senast detta datum.
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
 END:VEVENT
 
 END:VCALENDAR
