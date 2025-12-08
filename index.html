@@ -23,7 +23,7 @@
 
         /* === CONTAINER === */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             border-radius: 12px;
@@ -37,6 +37,7 @@
             color: white;
             padding: 40px 30px;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
@@ -49,6 +50,26 @@
             font-size: 1.1em;
             opacity: 0.95;
             margin-top: 10px;
+        }
+
+        /* Teknisk info-knapp i headern */
+        .tech-info-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .tech-info-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
         }
 
         /* === HUVUDINNEHÅLL === */
@@ -67,6 +88,51 @@
         .intro p {
             font-size: 1.05em;
             color: #2e7d32;
+        }
+
+        /* === PDF-SEKTION === */
+        .pdf-section {
+            background: #fff3e0;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff9800;
+        }
+
+        .pdf-section h2 {
+            color: #e65100;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .pdf-section p {
+            color: #6d4c00;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            background: #ff9800;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .pdf-link:hover {
+            background: #f57c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .pdf-link::before {
+            content: "📄";
+            margin-right: 8px;
+            font-size: 1.2em;
         }
 
         /* === KALENDERSEKTION === */
@@ -106,6 +172,25 @@
             color: #555;
             margin-bottom: 20px;
             line-height: 1.7;
+        }
+
+        /* Varningsmeddelande */
+        .warning-note {
+            background: #ffebee;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e53935;
+            font-size: 0.9em;
+        }
+
+        .warning-note strong {
+            color: #c62828;
+        }
+
+        .warning-note p {
+            color: #b71c1c;
+            margin: 0;
         }
 
         /* === KNAPPAR === */
@@ -150,6 +235,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        .btn-view-code {
+            background: #7b1fa2;
+            color: white;
+        }
+
+        .btn-view-code:hover {
+            background: #6a1b9a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
         .btn::before {
             margin-right: 8px;
             font-size: 1.1em;
@@ -161,6 +257,10 @@
 
         .btn-subscribe::before {
             content: "🔗";
+        }
+
+        .btn-view-code::before {
+            content: "👁️";
         }
 
         /* === URL-BOX === */
@@ -188,6 +288,161 @@
             word-break: break-all;
             color: #333;
             border: 1px solid #ffb74d;
+        }
+
+        /* === MODAL-FÖNSTER === */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 85vh;
+            overflow: hidden;
+            animation: slideDown 0.3s ease;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #004d40 0%, #00695c 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .modal-close {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            color: #ffeb3b;
+            transform: scale(1.2);
+        }
+
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: calc(85vh - 80px);
+        }
+
+        .modal-body h3 {
+            color: #004d40;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .modal-body h3:first-child {
+            margin-top: 0;
+        }
+
+        .modal-body p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .modal-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body li {
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .modal-body code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #d32f2f;
+        }
+
+        .modal-body pre {
+            background: #263238;
+            color: #aed581;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+
+        /* Code viewer specifik stil */
+        .code-viewer {
+            background: #263238;
+            color: #aed581;
+            padding: 20px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+            line-height: 1.5;
+            max-height: 500px;
+            overflow-y: auto;
         }
 
         /* === INSTRUKTIONSSEKTION === */
@@ -285,6 +540,21 @@
                 width: 100%;
                 justify-content: center;
             }
+
+            .tech-info-btn {
+                position: static;
+                margin-top: 15px;
+                display: inline-block;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+
+            .modal-body {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -294,6 +564,7 @@
         
         <!-- HEADER MED TITEL -->
         <header>
+            <button class="tech-info-btn" onclick="openTechModal()">ℹ️ Teknisk information</button>
             <h1>🏛️ Budgetprocess Simrishamn</h1>
             <p>Kalender för budgetprocessen 2026–2027</p>
         </header>
@@ -310,6 +581,20 @@
                 </p>
             </div>
 
+            <!-- PDF-SEKTION -->
+            <div class="pdf-section">
+                <h2>📋 Budgetanvisningar och tidplan</h2>
+                <p>
+                    Här finns det fullständiga dokumentet med alla uppgifter om tidplan och anvisningar 
+                    för budget 2027–2031. Detta är källdokumentet som kalenderfilerna är baserade på.
+                </p>
+                <a href="https://github.com/lundgren9/budgetprocess_2026/blob/main/budgetanvisningar.pdf" 
+                   target="_blank" 
+                   class="pdf-link">
+                    Öppna budgetanvisningar.pdf
+                </a>
+            </div>
+
             <!-- INSTRUKTIONER FÖR OUTLOOK -->
             <div class="instructions">
                 <h2>📖 Så här använder du kalendern i Outlook</h2>
@@ -324,9 +609,9 @@
                         </ul>
                     </li>
                     <li>
-                        <strong>Prenumerera via URL (rekommenderas):</strong>
+                        <strong>Prenumerera via URL (rekommenderas för NY-version):</strong>
                         <ul style="margin-top: 8px; margin-left: 20px;">
-                            <li>Kopiera URL:en från "Prenumerera via URL"</li>
+                            <li>Kopiera URL:en från "Kopiera prenumerations-URL"</li>
                             <li>I Outlook: <em>Arkiv → Kontoinställningar → Internetkalendrar → Ny...</em></li>
                             <li>Klistra in URL:en och klicka OK</li>
                             <li><em>✅ Uppdateras automatiskt när vi ändrar kalendern!</em></li>
@@ -338,7 +623,7 @@
             <!-- KALENDERSEKTION -->
             <section class="calendar-section">
                 
-                <!-- KALENDERFIL 1 -->
+                <!-- KALENDERFIL 1 - URSPRUNGLIG -->
                 <div class="calendar-card">
                     <h3>Budgetprocess 2026 (ursprunglig version)</h3>
                     <p>
@@ -347,30 +632,36 @@
                         MBL-förhandlingar och kommunfullmäktiges beslut.
                     </p>
                     
+                    <!-- Varning om att prenumeration inte fungerar -->
+                    <div class="warning-note">
+                        <p>
+                            <strong>⚠️ OBS:</strong> Prenumeration via URL fungerar INTE för denna version 
+                            eftersom filen saknar obligatoriska UID-fält och korrekt tidszonsinformation 
+                            som krävs för kalenderprenumerationer. Använd istället den förbättrade 
+                            NY-versionen nedan för prenumerationsfunktionalitet.
+                        </p>
+                    </div>
+                    
                     <div class="button-group">
                         <a href="budgetprocess_2026.ics" class="btn btn-download" download>
                             Ladda ner kalenderfil
                         </a>
-                        <button class="btn btn-subscribe" onclick="copyToClipboard('url1')">
-                            Kopiera prenumerations-URL
+                        <button class="btn btn-view-code" onclick="viewICSCode('budgetprocess_2026.ics')">
+                            Visa innehåll/kod
                         </button>
-                    </div>
-                    
-                    <div class="url-box" id="url1-box" style="display: none;">
-                        <p>✅ URL kopierad! Använd denna i Outlook:</p>
-                        <div class="url-display" id="url1">
-                            https://raw.githubusercontent.com/lundgren9/budgetprocess_2026/main/budgetprocess_2026.ics
-                        </div>
                     </div>
                 </div>
 
-                <!-- KALENDERFIL 2 -->
+                <!-- KALENDERFIL 2 - NY FÖRBÄTTRAD -->
                 <div class="calendar-card">
                     <h3>Budgetprocess 2026 NY (uppdaterad version) ⭐</h3>
                     <p>
                         <strong>Rekommenderad version!</strong> Uppdaterad kalender som även innehåller 
                         informationsposter om kommunens övergripande mål, prioriterade fokusområden 
                         för 2027 samt deadline för nämndernas internbudget (31 januari 2027).
+                        <br><br>
+                        <strong>Förbättringar:</strong> Innehåller UID-fält, korrekt tidszonsinformation 
+                        och andra tekniska förbättringar som gör att prenumeration via URL fungerar perfekt!
                     </p>
                     
                     <div class="button-group">
@@ -379,6 +670,9 @@
                         </a>
                         <button class="btn btn-subscribe" onclick="copyToClipboard('url2')">
                             Kopiera prenumerations-URL
+                        </button>
+                        <button class="btn btn-view-code" onclick="viewICSCode('budgetprocess_2026_NY.ics')">
+                            Visa innehåll/kod
                         </button>
                     </div>
                     
@@ -411,6 +705,9 @@
                     <li>Information om kommunens hållbarhetspolicy och fokusområden</li>
                     <li>Deadline för nämndernas fastställande av internbudget (31 januari 2027)</li>
                     <li>Utökade beskrivningar för bättre förståelse av varje aktivitet</li>
+                    <li>UID-fält för varje händelse (krävs för prenumeration)</li>
+                    <li>Korrekt tidszonsinformation (Europe/Stockholm)</li>
+                    <li>DTSTAMP-fält (tidsstämpel för varje händelse)</li>
                 </ul>
 
                 <h3>🎯 Viktiga fokusområden för 2027</h3>
@@ -434,10 +731,153 @@
         </footer>
     </div>
 
-    <!-- JAVASCRIPT FÖR KOPIERA-FUNKTIONALITET -->
+    <!-- MODAL FÖR VISNING AV ICS-KOD -->
+    <div id="codeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="codeModalTitle">Filinnehåll</h2>
+                <button class="modal-close" onclick="closeCodeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="margin-bottom: 15px;">Detta är det råa innehållet i ICS-kalenderfilen. Du kan kopiera detta om du vill redigera filen manuellt.</p>
+                <pre id="codeContent" class="code-viewer">Laddar innehåll...</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL FÖR TEKNISK INFORMATION -->
+    <div id="techModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>🔧 Teknisk information</h2>
+                <button class="modal-close" onclick="closeTechModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h3>📄 Om denna webbsida (index.html)</h3>
+                <p>
+                    Denna webbsida är byggd med modern webbteknik och följer best practices för 
+                    användarupplevelse och tillgänglighet.
+                </p>
+                
+                <h4 style="color: #00695c; margin-top: 15px;">Teknologier som används:</h4>
+                <ul>
+                    <li><strong>HTML5:</strong> Semantisk markup med element som &lt;header&gt;, &lt;section&gt;, &lt;footer&gt;</li>
+                    <li><strong>CSS3:</strong> Modern styling med flexbox, gradienter, animationer och responsiv design</li>
+                    <li><strong>JavaScript (Vanilla):</strong> Interaktivitet utan externa bibliotek - fetch API för att hämta filinnehåll, Clipboard API för att kopiera URL:er, DOM-manipulation för modaler</li>
+                    <li><strong>Responsiv design:</strong> Fungerar på desktop, surfplatta och mobil med media queries</li>
+                </ul>
+
+                <h4 style="color: #00695c; margin-top: 15px;">Funktioner:</h4>
+                <ul>
+                    <li>Dynamisk hämtning av ICS-filinnehåll från GitHub Raw</li>
+                    <li>Modal-fönster för att visa kod och teknisk information</li>
+                    <li>Kopiering av prenumerations-URL:er till urklipp</li>
+                    <li>Smooth scrolling och CSS-animationer</li>
+                    <li>Tillgänglig och semantisk HTML-struktur</li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">📅 Om ICS-kalenderfiler</h3>
+                <p>
+                    ICS (iCalendar) är ett standardformat för kalenderdata som används av alla 
+                    moderna kalenderprogram inklusive Outlook, Google Calendar, Apple Calendar m.fl.
+                </p>
+
+                <h4 style="color: #00695c; margin-top: 15px;">Vad gör en ICS-fil "prenumerationsbar"?</h4>
+                <p>
+                    För att en ICS-fil ska fungera med kalenderprenumeration (så att den uppdateras 
+                    automatiskt) måste den innehålla vissa obligatoriska fält:
+                </p>
+                <ul>
+                    <li>
+                        <strong>UID (Unique Identifier):</strong> Varje händelse MÅSTE ha ett unikt ID. 
+                        Detta gör att kalenderprogrammet kan identifiera och uppdatera specifika händelser.
+                        <br>
+                        Exempel: <code>UID:budgetprocess-2026-03-12-uppstart@simrishamn.se</code>
+                    </li>
+                    <li>
+                        <strong>DTSTAMP (Date-Time Stamp):</strong> Tidsstämpel för när händelsen skapades/ändrades.
+                        <br>
+                        Exempel: <code>DTSTAMP:20251208T120000Z</code>
+                    </li>
+                    <li>
+                        <strong>VTIMEZONE:</strong> Tidszonsinformation för korrekt visning av tider.
+                        <br>
+                        Exempel: <code>TZID:Europe/Stockholm</code>
+                    </li>
+                    <li>
+                        <strong>METHOD:PUBLISH:</strong> Indikerar att kalendern är publicerad och kan prenumereras på
+                    </li>
+                </ul>
+
+                <h4 style="color: #00695c; margin-top: 15px;">Varför den ursprungliga filen inte fungerar för prenumeration:</h4>
+                <p>
+                    Den ursprungliga <code>budgetprocess_2026.ics</code> saknar UID-fält för varje händelse 
+                    och har ingen VTIMEZONE-definition. Detta gör att Outlook och andra kalenderprogramm 
+                    inte kan hantera filen korrekt vid prenumeration - händelserna visas helt enkelt inte.
+                </p>
+
+                <h4 style="color: #00695c; margin-top: 15px;">Förbättringar i NY-versionen:</h4>
+                <p>
+                    <code>budgetprocess_2026_NY.ics</code> innehåller alla nödvändiga fält:
+                </p>
+                <pre style="background: #263238; color: #aed581; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 0.85em;">BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Simrishamns kommun//Budgetprocess 2026-2027//SV
+METHOD:PUBLISH
+X-WR-CALNAME:Budgetprocess Simrishamn 2026-2027
+X-WR-TIMEZONE:Europe/Stockholm
+
+BEGIN:VTIMEZONE
+TZID:Europe/Stockholm
+...
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:budgetprocess-2026-03-12-uppstart@simrishamn.se
+DTSTAMP:20251208T120000Z
+DTSTART;TZID=Europe/Stockholm:20260312T080000
+DTEND;TZID=Europe/Stockholm:20260312T120000
+SUMMARY:Uppstart med budgeten 2027
+DESCRIPTION:Halvdag. Genomgång av tidplan...
+LOCATION:Kommunhuset
+STATUS:CONFIRMED
+END:VEVENT
+...
+END:VCALENDAR</pre>
+
+                <h3 style="margin-top: 30px;">🔗 GitHub Raw URL</h3>
+                <p>
+                    För att kalenderprogramm ska kunna prenumerera på en fil från GitHub, måste vi 
+                    använda "Raw"-URL:en, inte den vanliga GitHub-sidans URL.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Fel:</strong> <code>github.com/lundgren9/budgetprocess_2026/...</code>
+                        <br>
+                        <em>Detta ger HTML-sidan med GitHub:s gränssnitt</em>
+                    </li>
+                    <li>
+                        <strong>Rätt:</strong> <code>raw.githubusercontent.com/lundgren9/...</code>
+                        <br>
+                        <em>Detta ger rå filinnehållet som kalenderprogrammet kan läsa</em>
+                    </li>
+                </ul>
+
+                <h3 style="margin-top: 30px;">👨‍💻 Utvecklad med AI-assistans</h3>
+                <p>
+                    Denna webbsida och den förbättrade ICS-filen har skapats med hjälp av Claude (Anthropic) 
+                    för att demonstrera hur modern AI kan hjälpa till med teknisk dokumentation, 
+                    webbutveckling och dataformatering.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FÖR FUNKTIONALITET -->
     <script>
         /**
-         * Funktion för att kopiera URL till urklipp och visa den på sidan
+         * Kopierar URL till urklipp och visar den på sidan
+         * Används för att kopiera prenumerations-URL:er
          * @param {string} urlId - ID för elementet som innehåller URL:en
          */
         function copyToClipboard(urlId) {
@@ -465,6 +905,97 @@
                 console.error('Fel vid kopiering:', err);
             });
         }
+
+        /**
+         * Hämtar och visar innehållet i en ICS-fil i en modal
+         * Använder GitHub Raw URL för att hämta filinnehållet
+         * @param {string} filename - Namnet på ICS-filen att visa
+         */
+        function viewICSCode(filename) {
+            // Öppna modalen och visa laddningsmeddelande
+            const modal = document.getElementById('codeModal');
+            const titleElement = document.getElementById('codeModalTitle');
+            const codeContent = document.getElementById('codeContent');
+            
+            // Sätt titel baserat på filnamn
+            titleElement.textContent = 'Innehåll: ' + filename;
+            codeContent.textContent = 'Hämtar filinnehåll från GitHub...';
+            
+            // Visa modalen
+            modal.classList.add('active');
+            
+            // Bygg GitHub Raw URL baserat på filnamn
+            const rawUrl = 'https://raw.githubusercontent.com/lundgren9/budgetprocess_2026/main/' + filename;
+            
+            // Hämta filinnehållet från GitHub med fetch API
+            fetch(rawUrl)
+                .then(response => {
+                    // Kontrollera att svaret är OK
+                    if (!response.ok) {
+                        throw new Error('Kunde inte hämta filen: ' + response.statusText);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    // Visa filinnehållet i modalen
+                    codeContent.textContent = data;
+                })
+                .catch(error => {
+                    // Visa felmeddelande om något gick fel
+                    codeContent.textContent = 'Fel vid hämtning av fil:\n\n' + error.message + 
+                        '\n\nKontrollera att filen finns på GitHub och att du har internetanslutning.';
+                    console.error('Fetch error:', error);
+                });
+        }
+
+        /**
+         * Stänger modal-fönstret för kodvisning
+         */
+        function closeCodeModal() {
+            const modal = document.getElementById('codeModal');
+            modal.classList.remove('active');
+        }
+
+        /**
+         * Öppnar modal-fönstret för teknisk information
+         */
+        function openTechModal() {
+            const modal = document.getElementById('techModal');
+            modal.classList.add('active');
+        }
+
+        /**
+         * Stänger modal-fönstret för teknisk information
+         */
+        function closeTechModal() {
+            const modal = document.getElementById('techModal');
+            modal.classList.remove('active');
+        }
+
+        /**
+         * Stäng modaler när användaren klickar utanför modal-innehållet
+         */
+        window.onclick = function(event) {
+            const codeModal = document.getElementById('codeModal');
+            const techModal = document.getElementById('techModal');
+            
+            if (event.target === codeModal) {
+                closeCodeModal();
+            }
+            if (event.target === techModal) {
+                closeTechModal();
+            }
+        }
+
+        /**
+         * Stäng modaler med Escape-tangenten
+         */
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCodeModal();
+                closeTechModal();
+            }
+        });
     </script>
 </body>
 </html>
